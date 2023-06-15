@@ -1,15 +1,15 @@
 function Reproducir(){
-    var audio=document.getElementById("mi-audio");
+    let audio=document.getElementById("mi-audio");
     audio.play();
 }
 
 function Pausar(){
-    var audio= document.getElementById("mi-audio");
+    let audio= document.getElementById("mi-audio");
     audio.pause();
 }
 
 function CrearAudioDinamicamente(){
-    var audio=document.createElement("audio");
+    let audio=document.createElement("audio");
     audio.src="/music/music2.mp3";
     audio.addEventListener('ended', function(){
         setTimeout(function(){audio.play();},500);
@@ -18,12 +18,12 @@ function CrearAudioDinamicamente(){
 }
 
 function VerOtrasPropiedades(){
-    var audio=document.getElementById('mi-audio');
-    var tiempo=audio.currentTime;
-    var duracion=audio.duration;
-    var estadored = audio.networkState;
-    var estado= audio.readyState;
-
+    let audio=document.getElementById('mi-audio');
+    let tiempo=audio.currentTime;
+    let duracion=audio.duration;
+    let estadored = audio.networkState;
+    let estado= audio.readyState;
+    
     alert("Tiempo actual de reproducciòn: "+ tiempo);
     alert(`Duraciòn total del audio: ${duracion}`);
     alert("Estado de red: "+estadored);
