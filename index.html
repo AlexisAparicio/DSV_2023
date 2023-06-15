@@ -7,6 +7,20 @@
     <title>Pruebas de DSV</title>
 </head>
 <body>
-    
+    <div id="result">
+
+    </div>
+
+    <script>
+        //check browser support
+        if(typeof(Storage)!=="undefined"){
+            //Store
+            localStorage.setItem("lastname","Aparicio");
+            // Recueprar
+            document.getElementById("result").innerHTML=localStorage.getItem("lastname");
+        }else{
+            document.getElementById("result").innerHTML="Sorry, your browser does not support Web Storage...";
+        }
+    </script>
 </body>
 </html>
